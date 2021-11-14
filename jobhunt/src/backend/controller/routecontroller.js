@@ -14,12 +14,12 @@ router.get('', async (req, res) => {
         return res.status(500).json(err)
     }
 })
-router.get("/:id", async (req, res) => {
+router.get('/:id', async (req, res) => {
     console.log("in id")
     const { jobs } = await Jobs.find( {"_id": req.params.id } ).lean().exec()
-    return res.status(200).json({ jobs } )
+    return res.status(200).json( jobs )
 })
-router.get("/:title", async (req, res) => {
+router.get('/:title', async (req, res) => {
     const jobs = await Jobs.find( {"title": req.params.title } ).lean().exec()
     return res.status(200).json({ jobs })
 })
