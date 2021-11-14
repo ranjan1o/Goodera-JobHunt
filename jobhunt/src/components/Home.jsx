@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { JobCard } from "./JobCard";
+
 const NavWrapper = styled.div`
 .navbar{
     text-align: left;
@@ -14,15 +17,20 @@ const NavWrapper = styled.div`
 `
 
 const Home = () => {
+    const [show, setShow] = useState(false)
     return <NavWrapper>
         <div className="navbar">
             <span>Goodera Job Hunt</span>
             <span>Home</span>
             <span>About</span>
             <span>Login</span>
-            <NavLink to="/post"><button>Post a job</button></NavLink>
+            <NavLink to="/post" ><button onClick={() => {
+                setShow(true)
+            }} >Post a job</button></NavLink>
         </div>
-         <div>hom epage</div>
-        </NavWrapper>
+     
+        <div>{show?<JobCard/>:""}</div>
+   
+         </NavWrapper>
 }
 export {Home}

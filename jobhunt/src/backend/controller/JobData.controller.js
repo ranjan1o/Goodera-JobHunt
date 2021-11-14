@@ -5,7 +5,7 @@ const express = require("express");
 const router = express.Router();
 
 const createpost = async (req, res) => {
-    console.log("hjdjshcj",req.body);
+   
     try {
         const job = await Jobdeatils.create(req.body)
         return res.status(201).json({status:"sucess"});
