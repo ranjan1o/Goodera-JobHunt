@@ -10,7 +10,7 @@ const JobSchema = new mongoose.Schema({
     location: { type: String, required: true },
     level: { type: String, required: true },
     tags: { type: String, required: true },
-    comapny: { type: String, required: true },
+    company: { type: Object, required:true},
     
 })
 module.exports=mongoose.model('jobdata',JobSchema)
