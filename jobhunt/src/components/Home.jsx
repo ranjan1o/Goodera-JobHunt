@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { NavLink } from 'react-router-dom';
 const NavWrapper = styled.div`
 .navbar{
     text-align: left;
@@ -20,7 +20,7 @@ const Home = () => {
             <span>Home</span>
             <span>About</span>
             <span>Login</span>
-            <button>Post a job</button>
+            <NavLink to="/post"><button>Post a job</button></NavLink>
         </div>
          <div>hom epage</div>
         </NavWrapper>

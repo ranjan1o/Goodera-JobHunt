@@ -1,7 +1,13 @@
+import styled from "styled-components"
 
+const jobCardWrapaper = styled.div`
+`
 
 const JobCard = () => {
-    return <>
-          <div>job card</div>
-        </>
+    return <jobCardWrapaper>
+        <div>
+            
+          </div>
+        </jobCardWrapaper>
 }
+export {JobCard}
